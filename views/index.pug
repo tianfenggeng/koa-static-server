@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  input#btn(type="file")
+
+  ul
+    each fileName in fileList
+      li
+        a(href=`/staticServer/${fileName}`)= fileName
